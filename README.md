@@ -6,13 +6,14 @@
 
 #### Description
 
-Tailscale as Docker Image.
+Tailscale as Docker Image.  
+Using nftables by default
 
 #### Run
 
 most simple way of running the container
 
-    docker run --rm zyclonite/tailscale
+    docker run -d --name=tailscale -v /var/lib/tailscale:/var/lib/tailscale -v /dev/net/tun:/dev/net/tun --network=host --cap-add=NET_ADMIN --cap-add=NET_RAW zyclonite/tailscale
 
 #### Source
 
