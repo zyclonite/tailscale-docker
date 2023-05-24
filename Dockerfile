@@ -1,4 +1,4 @@
-FROM tailscale/tailscale:v1.40.1
+FROM tailscale/tailscale:v1.42.0
 
 RUN cd /sbin && \
     rm iptables iptables-save iptables-restore ip6tables ip6tables-save ip6tables-restore && \
